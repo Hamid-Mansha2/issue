@@ -9,4 +9,20 @@ before_install:
   - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > .npmrc
   - echo -e "machine github.com\n  login hk01bot\n  password ${CI_USER_PASSWORD}" >> ~/.netrc
   - chmod 600 ~/.netrc
+  
+  default_ios: &default_ios
+
+  language: objective-c
+  podfile: ./ios/Podfile
+
+  os: osx
+  osx_image: xcode14
+
+  cache:
+    yarn: true
+    bundler: true
+    directories:
+      - $HOME/.rvm/
+      - $HOME/Library/Caches/CocoaPods
+
 
