@@ -1,3 +1,12 @@
 dist: xenial
 os: linux
 language: shell
+
+stages:
+  - name: 'Build'
+
+before_install:
+  - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > .npmrc
+  - echo -e "machine github.com\n  login hk01bot\n  password ${CI_USER_PASSWORD}" >> ~/.netrc
+  - chmod 600 ~/.netrc
+
