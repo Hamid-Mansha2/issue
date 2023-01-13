@@ -18,11 +18,4 @@ before_install:
   os: osx
   osx_image: xcode14
 
-  cache:
-    yarn: true
-    bundler: true
-    directories:
-      - $HOME/.rvm/
-      - $HOME/Library/Caches/CocoaPods 
-
 
