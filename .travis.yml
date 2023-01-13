@@ -23,6 +23,6 @@ before_install:
     bundler: true
     directories:
       - $HOME/.rvm/
-      - $HOME/Library/Caches/CocoaPods
+      - $HOME/Library/Caches/CocoaPods 
 
 
